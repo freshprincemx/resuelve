@@ -2,7 +2,21 @@
 
 Solución propuesta a la prueba para aplicar a la vacante de Ingeniero de Software en [Resuelve Tu Deuda](https://resuelvetudeuda.com/) 
 
-## Instalación
+##  Versión Productiva
+
+Liga a la API productiva publicada en Heroku:
+
+```sh 
+https://resuelve.herokuapp.com/
+```
+
+##  Documentación de la API
+
+```sh 
+https://documenter.getpostman.com/view/8655165/UVyvuuJS
+```
+
+## Instalación local
 
 Clonar el proyecto desde GitHub:
 
