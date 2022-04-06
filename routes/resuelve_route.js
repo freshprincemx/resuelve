@@ -1,13 +1,8 @@
 const {Router} = require('express');
+const { obtenerSalarioCompleto } = require('../controllers/resuelve_controller');
 
 const router = Router();
 
-
-router.get('/',(req, res) => {
-    res.json({
-        ok: true,
-        msg: 'Peticion GET correcta'
-    });
-});
+router.get('/', obtenerSalarioCompleto);
 
 module.exports = router;
