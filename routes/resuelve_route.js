@@ -1,13 +1,11 @@
 const {Router} = require('express');
 const { obtenerSalarioCompleto } = require('../controllers/resuelve_controller');
-const { validarCampos, validarJWT, esAdminRole } = require('../middlewares');
+const { validarJWT } = require('../middlewares');
 
 const router = Router();
 
-router.get('/',[
-    validarJWT,
-    esAdminRole,
-    validarCampos
-], obtenerSalarioCompleto);
+router.get('/', obtenerSalarioCompleto);
+
+router.get('/jwt', [validarJWT], obtenerSalarioCompleto);
 
 module.exports = router;

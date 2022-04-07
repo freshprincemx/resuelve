@@ -11,6 +11,7 @@ El release v1.1.0 contiene las siguentes mejoras:
 - Se agrega autenticación por Login (usuario/contraseña) para generación de JWT y protección de rutas
 - Se agregan middlewares para validar la información de las peticiones
 - Se agrega CRUD de usuarios y niveles
+- Se valida que el porcentaje del bono no exceda el 100%
 
 ##  Versión Productiva
 
@@ -50,11 +51,33 @@ npm install --production
 NODE_ENV=production node app
 ```
 
+## Usuarios:
+
+Usuarios de prueba para autenticación con login y generación de JWT:
+
+```sh
+{
+    "correo": "resuelve@mail.com",
+    "password": "123456",
+    "rol": "ADMIN_ROLE"
+},
+{
+    "correo": "usuario@mail.com",
+    "password": "123456",
+    "rol": "USER_ROLE"
+},
+{
+    "correo": "sinhue@mail.com",
+    "password": "123456",
+    "rol": "ADMIN_ROLE"
+}
+```
+
 ## Tecnologías utilizadas  
 
 | Tecnología | Funcionalidad |
 | ------ | ------ |
 | [Node.js](https://nodejs.org/) | Node.js es un entorno de ejecución de un solo hilo, de código abierto y multiplataforma para crear aplicaciones de red y del lado del servidor rápidas y escalables. Se ejecuta en el motor de ejecución de JavaScript V8, y utiliza una arquitectura de E/S basada en eventos y sin bloqueos, lo que la hace eficiente y adecuada para aplicaciones en tiempo real.|
 | [Express](https://expressjs.com/es/) | Express.js es un framework web back-end para Node.js, está diseñado para crear aplicaciones web y API. |
-| [Cors](https://expressjs.com/en/resources/middleware/cors.html) | CORS es un paquete de node.js para proporcionar un middleware Connect/Express que se puede usar para habilitar CORS con varias opciones. |
+| [MongoDB Atlas](https://www.mongodb.com/es/atlas/database) | Base de datos no relacional en la nube. |
 

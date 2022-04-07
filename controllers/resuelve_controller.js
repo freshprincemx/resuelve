@@ -42,9 +42,10 @@ const obtenerSalarioCompleto = async (req, res = response) => {
 }
 
 const calcularSueldoCompleto = (sueldo = 0, bono = 0, golesJugador = 0, metaJugador = 0, golesEquipo = 0, metaEquipo = 0) => {
-    let porcentajeIndividual = (metaJugador>0)?golesJugador/metaJugador:0;
-    let porcentajeEquipo = (metaEquipo>0)?golesEquipo/metaEquipo:0;
-    const sueldoCompleto = sueldo + bono*((porcentajeIndividual+porcentajeEquipo)/2)
+    const porcentajeIndividual = (metaJugador>0)?golesJugador/metaJugador:0;
+    const porcentajeEquipo = (metaEquipo>0)?golesEquipo/metaEquipo:0;
+    const porcentajeBono = (porcentajeIndividual+porcentajeEquipo)/2;
+    const sueldoCompleto = sueldo + bono*((porcentajeBono>1)?1:porcentajeBono)
     return sueldoCompleto;
 }
 
