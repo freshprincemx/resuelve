@@ -1,6 +1,16 @@
 # Prueba Ingeniería Resuelve
 
-Solución propuesta a la prueba para aplicar a la vacante de Ingeniero de Software en [Resuelve Tu Deuda](https://resuelvetudeuda.com/) 
+Solución propuesta a la prueba para aplicar a la vacante de Ingeniero de Software en [Resuelve Tu Deuda](https://resuelvetudeuda.com/).
+
+El release v1.0.0 contiene la version básica de la solución la cual obtiene la información de niveles y goles por medio de un archivo json y se realiza el cálculo de sueldo completo utilizando el método GET.
+
+El release v1.1.0 contiene las siguentes mejoras:
+
+- Se calcula el sueldo de los jugadores de otros equipos con distintos mínimos por nivel
+- Se agrega base de datos Mongo Atlas para almacenar la información de niveles, usuarios y roles
+- Se agrega autenticación por Login (usuario/contraseña) para generación de JWT y protección de rutas
+- Se agregan middlewares para validar la información de las peticiones
+- Se agrega CRUD de usuarios y niveles
 
 ##  Versión Productiva
 
@@ -13,7 +23,7 @@ https://resuelve.herokuapp.com/
 ##  Documentación de la API
 
 ```sh 
-https://documenter.getpostman.com/view/8655165/UVyvuuJS
+https://documenter.getpostman.com/view/8655165/UVyuQuM2
 ```
 
 ## Instalación local
